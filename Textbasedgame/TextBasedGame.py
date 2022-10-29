@@ -30,6 +30,14 @@ global inventory
 inventory = []
 show_instructions()
 
+def player_status():
+    global current_room
+    global inventory
+    # printing player status
+    print('You are in the {}'.format(current_room))
+    # print('Inventory: ' + str(inventory))
+    if 'item' in rooms[current_room]:
+        print('Inventory:' + rooms[current_room]['item'])
 
 def player_status():
     global current_room
