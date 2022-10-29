@@ -3,24 +3,9 @@
 def show_instructions():
     # print a main menu and the commands
     print('\nWelcome to Dragonball Z Text Adventure Game!\n')
-    print('Collect the 5 items and learn the 3 techniques to win the game, or be defeated by the vile Frieza.')
+    print('Collect the 8 items to win the game, or be defeated by the vile Frieza.')
     print('Move commands: Go South, Go North, Go East, Go West')
-    print("Add to Inventory: get 'item name'")
-
-
-# noinspection PyGlobalUndefined
-def player_status():
-    # printing player status
-    global current_room
-    global inventory
-    print('_' * 20)
-    print('You are in the {}'.format(current_room))
-    # print('Inventory: ' + str(inventory))
-    if 'item' in rooms[current_room]:
-        print('Inventory:' + rooms[current_room]['item'])
-    if 'Technique' in rooms[current_room]:
-        print('You see ' + rooms[current_room]['Technique'])
-    print('_' * 20)
+    print("Add to Inventory: get 'item")
 
 
 # A dictionary linking a room to other rooms
@@ -29,12 +14,12 @@ rooms = {
     'West City': {'name': 'West City', 'South': "King Kai's Planet", 'North': "Korin's Tower", 'East': 'Spaceship',
                   'West': 'Kame House',
                   'item': 'Flying Nimbus'},
-    "King Kai's Planet": {'name': "King Kai's Planet", 'North': 'West City', 'East': 'Heaven', 'Technique': 'Kaioken'},
-    'Kame House': {'name': 'Kame House', 'West': 'West City', 'Technique': 'Kamehameha'},
+    "King Kai's Planet": {'name': "King Kai's Planet", 'North': 'West City', 'East': 'Heaven', 'item': 'Kaioken'},
+    'Kame House': {'name': 'Kame House', 'West': 'West City', 'item': 'Kamehameha'},
     "Korin's Tower": {'name': "Korin's Tower", 'South': 'West City', 'item': 'Senzu Bean', 'East': 'The Lookout'},
     'The Lookout': {'name': 'The Lookout', 'West': "Korin's Tower", 'item': 'Dragon Ball'},
     'Heaven': {'name': 'Heaven', 'West': "King Kai's Planet", 'item': 'Armor'},
-    'Spaceship': {'name': 'Spaceship', 'North': 'Namek', 'Technique': 'Super Saiyan'},
+    'Spaceship': {'name': 'Spaceship', 'North': 'Namek', 'item': 'Super Saiyan'},
     'Namek': {'name': 'Namek', 'South': 'Spaceship', 'item': 'Frieza!'},  # villain encounter
     'Exit': {'name': 'Exit'}
 }
@@ -45,6 +30,14 @@ global inventory
 inventory = []
 show_instructions()
 
+def player_status():
+    global current_room
+    global inventory
+    # printing player status
+    print('You are in the {}'.format(current_room))
+    # print('Inventory: ' + str(inventory))
+    if 'item' in rooms[current_room]:
+        print('Inventory:' + rooms[current_room]['item'])
 
 def main():
     global current_room
@@ -53,6 +46,8 @@ def main():
     command = ''
     while command == '':
         command = input('\nIn what direction would you like to go?').title()
+    if command == 'player status':
+        print(player_status())
     if command == 'Go North' or command == 'Go South' or command == 'Go East' or command == 'Go West':
         command = command[3:]
         if command not in rooms[current_room]:
@@ -70,12 +65,12 @@ def main():
     # function for ending the game
     if current_room == 'Namek':
         # you lose
-        print('Oh, No! You did not acquire all of the items and techniques')
+        print('Oh, No! You did not acquire all of the items')
         exit(0)
 
     if len(inventory) == 8:
         # you win
-        print('Congratulations! You have collected all items and learned all the techniques to defeat the vile villain '
+        print('Congratulations! You have collected all items to defeat the vile villain '
               'Frieza!')
 
 

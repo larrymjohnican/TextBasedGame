@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef634619-f077-4ec1-a5b6-5f2e3ae9304c" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/Textbasedgame/TextBasedGame.py" afterDir="false" />
+    <list default="true" id="ef634619-f077-4ec1-a5b6-5f2e3ae9304c" name="Changes" comment="second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textbasedgame/TextBasedGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Textbasedgame/TextBasedGame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <recent name="C:\Users\johni\PycharmProjects\pythonProject2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TextBasedGame">
+  <component name="RunManager">
     <configuration name="TextBasedGame" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666375302498</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="second commit">
+      <created>1666445456960</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666445456960</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +193,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>
